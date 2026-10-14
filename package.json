@@ -1,0 +1,20 @@
+{
+  "name": "htmel-mobile",
+  "version": "0.0.1",
+  "description": "htmel Mobile - Capacitor, React Native, and Expo replacement.",
+  "main": "index.js",
+  "scripts": {
+    "build:ios": "node scripts/build-ios.js",
+    "ios": "bash scripts/start-ios.sh",
+    "deploy:ios": "npm run build && cd ios/htmelMobileApp && xcodebuild -workspace htmelMobileApp.xcodeproj/project.xcworkspace -scheme htmelMobileApp -sdk iphonesimulator -configuration Debug",
+    "build:web": "bash scripts/build-web-ios.sh",
+    "web": "live-server www",
+    "build:android": "",
+    "android": "bash scripts/start-android.sh",
+    "deploy:android": "npm run build && cd android/app && ./gradlew assembleDebug"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "live-server": "^1.2.1"
+  }
+}
